@@ -2,4 +2,4 @@
 title: Pre-Show
 ---
 
-## The stream will begin shortly!
+## Le live va bientôt commencer !

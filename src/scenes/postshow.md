@@ -1,7 +1,7 @@
 ---
-title: Pre-Show
+title: Post-Show
 ---
 
-## Thanks for joining!
+## Merci de m'avoir suivi !
 
-Hope to see you again on stream soon 👋
+J'espère te revoir bientôt en ligne 👋

@@ -9,12 +9,11 @@ $w: rgba(255, 255, 255, 0.98);
   opacity: 0;
   transform: scale(0);
   transition: all 300ms ease-in-out;
-  --c1: #ef548f;
-  --c2: #ef8b6d;
-  --c3: #cfef6b;
-  --c4: #3bf0c1;
-  --c5: #bb4af0;
-  --shine-angle: 15deg;
+  --c1: #d367c1;
+  --c2: #dedf40;
+  --c3: #62cb5c;
+  --c4: var(--color-primary);
+  --shine-angle: -45deg;
   display: inline-grid;
   grid-template-areas: "text";
   place-items: center;
@@ -44,8 +43,7 @@ $w: rgba(255, 255, 255, 0.98);
         var(--c1),
         var(--c2),
         var(--c3),
-        var(--c4),
-        var(--c5)
+        var(--c4)
       );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

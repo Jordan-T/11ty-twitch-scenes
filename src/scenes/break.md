@@ -2,4 +2,4 @@
 title: Break
 ---
 
-## Taking a quick break - BRB! ⏱
+## Prend une petite pause - BRB! ⏱

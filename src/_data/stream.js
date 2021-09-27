@@ -1,10 +1,12 @@
 module.exports = {
-  twitchUsername: "5t3phDev",
-  title: "✨ Stream title here",
+  twitchUsername: "Jordan_Taisne",
+  title: "💻 HAPPY CODING",
   // accepts HTML
-  description: "@5t3ph // Stephanie Eckles",
-  cta: "buymeacoffee.com/moderncss",
-  chatCommands: ["css", "dev", "yay"],
+  description: "Jordan Taisne",
+  cta: "buymeacoffee.com/Jordan_Taisne",
+  chatCommands: ["vue", "dev", "yay"],
   preshowMessage:
-    "Welcome! 👋🏽 Where are you joining from? What are you hoping to learn?",
+    "Bienvenue ! 👋🏽 D'où viens-tu ? Que souhaites-tu apprendre ?",
+  guestName: 'Guest',
+  guestUserName: '@username'
 };
