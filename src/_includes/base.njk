@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ title }}</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
+</head>
+<body>
+	<main class="scene-{% if page.fileSlug %}{{ page.fileSlug }}{% else %}primary{% endif %}">
+	{{ content | safe }}
+	</main>
+	{% if not hideHeader %}
+	<header>
+		<div id="title">
+			<h1>{{ stream.title }}</h1>
+			<p>{{ stream.description | safe }}</p>
+			<strong class="cta">{{ stream.cta }}</strong>
+			<ul class="commands">
+				{% for command in stream.chatCommands %}
+				<li>!{{ command }}</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div id="chatbox">
+			<template id="chatMsg">
+				<p><strong></strong> <span></span></p>
+			</template>
+			
+			<div id="chatter">
+			{% if page.fileSlug == 'preshow' and stream.preshowMessage %}
+			<p><strong>{{ stream.twitchUsername }}</strong> {{ stream.preshowMessage }}</p>
+			{% endif %}
+		</div>
+		</div>
+	</header>
+	{% endif %}
+
+	{% if stream.chatCommands %}
+	{% include "comfy/index.njk" %}
+	{% endif %}
+</body>
+</html>

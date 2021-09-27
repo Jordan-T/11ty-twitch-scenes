@@ -1,0 +1,19 @@
+.scene-postshow,
+.scene-preshow,
+.scene-break {
+  display: grid;
+  place-content: center;
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  text-align: center;
+  padding: 8vw;
+  line-height: 1;
+
+  h2 {
+    font-size: 5rem;
+  }
+
+  p {
+    font-size: 3rem;
+  }
+}
