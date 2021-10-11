@@ -14,9 +14,12 @@
 	</main>
 	{% if not hideHeader %}
 	<header>
+		<div id="logo">
+			{% include "logo.njk" %}
+		</div>
 		<div id="title">
 			<h1>{{ stream.title }}</h1>
-			<p>{{ stream.description | safe }}</p>
+			{# <p>{{ stream.description | safe }}</p> #}
 			<strong class="cta">{{ stream.cta }}</strong>
 			<ul class="commands">
 				{% for command in stream.chatCommands %}
@@ -31,7 +34,7 @@
 			
 			<div id="chatter">
 			{% if page.fileSlug == 'preshow' and stream.preshowMessage %}
-			<p><strong>{{ stream.twitchUsername }}</strong> {{ stream.preshowMessage }}</p>
+			<p class="is-broadcaster"><strong>{{ stream.twitchUsername }}</strong> {{ stream.preshowMessage }}</p>
 			{% endif %}
 		</div>
 		</div>

@@ -28,8 +28,26 @@ ComfyJS.onSub = () => {
   activateCommandNode(thanks);
 };
 
-ComfyJS.onChat = (user, message) => {
+const getChatMessageClass = (flags) => {
+  if(flags.broadcaster) {
+    return 'is-broadcaster'
+  }
+  if(flags.mod) {
+    return 'is-moderator'
+  }
+  if(flags.subscriber) {
+    return 'is-subscriber'
+  }
+
+  return ''
+}
+
+ComfyJS.onChat = (user, message, flags) => {
   const newMsg = msgTemplate.content.cloneNode(true);
+  const messageClass = getChatMessageClass(flags)
+  if(messageClass) {
+    newMsg.firstElementChild.classList.add(messageClass)
+  }
   newMsg.querySelector("strong").textContent = user;
   newMsg.querySelector("span").textContent = message;
   chatter.appendChild(newMsg);
