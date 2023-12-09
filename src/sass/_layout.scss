@@ -5,7 +5,8 @@
 
 :root {
   // --color-primary: hsl(172, 100%, 39%);
-  --color-primary: hsl(166, 100%, 70%);
+  --color-primary: hsl(166, 100%, 40%);
+  --color-primary-surface: hsl(166, 100%, 35%);
   --color-broadcaster: #dedf40;
   --color-moderator: #d367c1;
   --color-subscriber: #62cb5c;
@@ -40,7 +41,7 @@ header {
       #d367c1 30%,
       #dedf40 50%,
       #62cb5c 75%,
-      var(--color-primary) 90%
+      var(--color-primary-surface) 90%
     )
     1;
 
@@ -79,6 +80,10 @@ header {
 #logo {
   align-self: center;
   margin:  0 -.25rem 0 .75rem;
+  
+  svg {
+    fill: var(--color-primary);
+  }
 }
 
 #chatbox {
